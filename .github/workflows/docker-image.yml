@@ -23,6 +23,6 @@ jobs:
     - name: Run the Docker image
       run: |
         ABSOLUTE_PATH=$(pwd)/.github/workflows
-        docker run -v $ABSOLUTE_PATH:/usr/src/app my-image-name:${{ env.IMAGE_TAG }}
+        docker run -v $ABSOLUTE_PATH:/usr/src/app:rw -u $(id -u):$(id -g) my-image-name:${{ env.IMAGE_TAG }}
         #docker run -v .github/workflows:/usr/src/app my-image-name:${{ env.IMAGE_TAG }}
     
