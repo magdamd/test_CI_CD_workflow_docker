@@ -1,1 +1,0 @@
-FROM quay.io/jupyter/scipy-notebook:2024-04-29
