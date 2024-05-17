@@ -15,4 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file .github/workflows/Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        TAG=$(date +%s)
+        echo "IMAGE_TAG=$TAG" >> $GITHUB_ENV
+        docker build . --file .github/workflows/Dockerfile --tag my-image-name:$TAG
+
+    - name: Run the Docker image
+      run: docker run -v .github/workflows:/usr/src/app my-image-name:${{ env.IMAGE_TAG }}
+    
