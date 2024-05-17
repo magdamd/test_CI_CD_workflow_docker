@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 
 # Copy the notebook file to the working directory
 COPY --chown=jovyan:users Test1.ipynb ./
-COPY --chown=jovyan:users ./results/arrayX.txt ./
+#COPY --chown=jovyan:users ./results/arrayX.txt ./
 
 # Set permissions on the working directory
 RUN chmod -R 777 /usr/src/app
