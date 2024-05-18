@@ -1,7 +1,7 @@
 import numpy as np
 
-vectorGroundTruth = np.loadtxt("./results_GroundTruth/arrayX.txt")
-vectorLastPush = np.loadtxt("./results_LastPush/arrayX.txt")
+vectorGroundTruth = np.loadtxt("./PlaygroundMR0/results_GroundTruth/arrayX.txt")
+vectorLastPush = np.loadtxt("./PlaygroundMR0/results_LastPush/arrayX.txt")
 
 class TestPythonScript:
 
