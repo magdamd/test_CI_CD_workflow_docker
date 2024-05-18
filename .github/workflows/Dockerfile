@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 #COPY --chown=jovyan:users ./results/arrayX.txt ./
 
 COPY ./.github/workflows/requirements_PlaygroundMR0_DockerImage.txt ./
-RUN pip install --no-cache-dir -r ./.github/workflows/requirements_PlaygroundMR0_DockerImage.txt
+RUN pip install --no-cache-dir -r requirements_PlaygroundMR0_DockerImage.txt
 
 # Set permissions on the working directory
 RUN chmod -R 777 /usr/src/app
