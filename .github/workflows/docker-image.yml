@@ -25,7 +25,7 @@ jobs:
       run: |
         ABSOLUTE_PATH=$(pwd)
         WORKFLOW_PATH=$ABSOLUTE_PATH/results
-        docker run -v $WORKFLOW_PATH:/usr/src/app:rw -u jovyan:users my-image-name:${{ env.IMAGE_TAG }}
+        docker run -v $ABSOLUTE_PATH:/usr/src/app:rw -u jovyan:users my-image-name:${{ env.IMAGE_TAG }}
     - name: Push changes
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Accessing the secret
