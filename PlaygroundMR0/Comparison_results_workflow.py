@@ -5,6 +5,6 @@ vectorLastPush = np.loadtxt("./PlaygroundMR0/results_LastPush/arrayX.txt")
 
 class TestPythonScript:
 
-    def compare(self):
+    def test_compare_PlaygroundMR0_results(self):
         assert np.array_equal(vectorGroundTruth, vectorLastPush)
 
