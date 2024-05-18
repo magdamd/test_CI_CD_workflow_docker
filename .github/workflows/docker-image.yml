@@ -52,7 +52,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
-        pip install -r .github/workflows/requirements_PlaygroundMR0.txt
+        pip install -r .github/workflows/requirements_PlaygroundMR0_pytest.txt
 
     - name: Run specific test
       run: |
