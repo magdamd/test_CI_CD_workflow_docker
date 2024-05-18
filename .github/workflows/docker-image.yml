@@ -56,6 +56,4 @@ jobs:
 
     - name: Run specific test
       run: |
-        ABSOLUTE_PATH=$(pwd)
-        WORK_PATH=$ABSOLUTE_PATH/PlaygroundMR0
-        pytest $WORK_PATH/Comparison_results_workflow.py
+        pytest ./PlaygroundMR0/Comparison_results_workflow.py
