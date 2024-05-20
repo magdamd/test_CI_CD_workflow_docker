@@ -14,6 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Free up space
+      run: |
+          sudo apt-get clean
+          sudo rm -rf /var/lib/apt/lists/*
+          docker system prune -af
+          docker volume prune -f
     - name: Set host directory permissions
       run: sudo chmod -R 777 $GITHUB_WORKSPACE
 
