@@ -1,1 +1,27 @@
+name: Docker Image CI
 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions: write-all
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set host directory permissions
+      run: sudo chmod -R 777 $GITHUB_WORKSPACE
+
+    # ==================================================
+    #      RUN PLAYGROUND NOTEBOOKS WITH DOCKER
+    # ==================================================
+    - name: Run the Docker image
+      run: |
+        ABSOLUTE_PATH=$(pwd)
+        WORK_PATH=$ABSOLUTE_PATH/PlaygroundMR0
+        docker run us-docker.pkg.dev/colab-images/public/runtime
