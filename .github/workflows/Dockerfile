@@ -10,8 +10,8 @@ WORKDIR /usr/src/app
 # Set permissions on the working directory
 RUN chmod -R 777 /usr/src/app
 
-COPY ./.github/workflows/requirements_PlaygroundMR0_DockerImage.txt ./
-RUN pip install --no-cache-dir -r requirements_PlaygroundMR0_DockerImage.txt
+#COPY ./.github/workflows/requirements_PlaygroundMR0_DockerImage.txt ./
+#RUN pip install --no-cache-dir -r requirements_PlaygroundMR0_DockerImage.txt
 
 
 
