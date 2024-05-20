@@ -15,5 +15,5 @@ RUN chmod -R 777 /usr/src/app
 
 
 
-CMD ["jupyter", "nbconvert", "--execute", "Test1.ipynb", "--to", "notebook", "--inplace", "--ExecutePreprocessor.timeout=-1"]
+CMD ["jupyter", "nbconvert", "--execute", "mr0_FID_seq_131.ipynb", "--to", "notebook", "--inplace", "--ExecutePreprocessor.timeout=-1"]
 
