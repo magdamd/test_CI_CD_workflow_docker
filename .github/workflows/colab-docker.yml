@@ -30,4 +30,4 @@ jobs:
       run: |
         ABSOLUTE_PATH=$(pwd)
         WORK_PATH=$ABSOLUTE_PATH/PlaygroundMR0
-        docker run us-docker.pkg.dev/colab-images/public/runtime
+        docker run europe-docker.pkg.dev/colab-images/public/runtime
