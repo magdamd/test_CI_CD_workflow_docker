@@ -35,6 +35,7 @@ jobs:
       run: |
           git config --local user.email "magdamduarte@gmail.com"
           git config --local user.name "magdamd"
+          git pull
           git add .
           git commit -m "Automated commit"
           git push origin HEAD:${{ github.head_ref }}
