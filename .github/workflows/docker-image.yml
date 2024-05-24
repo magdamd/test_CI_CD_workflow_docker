@@ -30,31 +30,31 @@ jobs:
         ABSOLUTE_PATH=$(pwd)
         WORK_PATH=$ABSOLUTE_PATH/PlaygroundMR0
         docker run -v $WORK_PATH:/usr/src/app:rw -u jovyan:users my-image-name:${{ env.IMAGE_TAG }}
-    - name: Push changes
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Accessing the secret
-      run: |
-          git config --global user.email "magdamduarte@gmail.com"
-          git config --global user.name "magdamd"
-          git add .
-          git commit -m "Automated commit"
-          git push origin main
+    #- name: Push changes
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Accessing the secret
+    #  run: |
+    #      git config --global user.email "magdamduarte@gmail.com"
+    #      git config --global user.name "magdamd"
+    #      git add .
+    #      git commit -m "Automated commit"
+    #      git push origin main
 
     # ==================================================
     #      COMPARISON GROUND TRUTH - LAST PUSH
     # ==================================================
     
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'  # Replace with your desired Python version
+    #- name: Set up Python
+    #  uses: actions/setup-python@v4
+    #  with:
+    #    python-version: '3.10'  # Replace with your desired Python version
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        pip install -r .github/workflows/requirements_PlaygroundMR0_pytest.txt
+    #- name: Install dependencies
+    #  run: |
+    #    python -m pip install --upgrade pip
+    #    pip install flake8 pytest
+    #    pip install -r .github/workflows/requirements_PlaygroundMR0_pytest.txt
 
-    - name: Run specific test
-      run: |
-        pytest ./PlaygroundMR0/Comparison_results_workflow.py
+    #- name: Run specific test
+    #  run: |
+    #    pytest ./PlaygroundMR0/Comparison_results_workflow.py
